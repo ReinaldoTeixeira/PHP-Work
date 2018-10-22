@@ -1,0 +1,8 @@
+home > tela inicial > vai ter imagens dos eventos que estao acontecendo
+
+eventos vai ter uma tabela, que vai ter a opção de se inscrever no evento.
+
+vamos tirar campo INSCRIÇÕES.
+
+quando selecionar evento vai direcionar para LOGIN (antes chamado usuario)
+
