@@ -11,8 +11,10 @@
 
 	$login  = $cli->authLogin($email,$senha);
 
-	
 
+
+
+	
 
 	echo json_encode($login);
 ?>
