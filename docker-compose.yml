@@ -2,6 +2,7 @@ version: '3.0'
 
 services:
   db:
+    container_name: db_fib
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: 12345678
@@ -9,12 +10,7 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     ports:
-<<<<<<< HEAD
-      - "3307:3306"
-=======
-      - "3306:3306"
-
->>>>>>> 45b1d4ae8470e5af405d7ca960765ad341342c6a
+      - "3302:3306"
   web:
     build: .
     # image: virgilioneto/laravel-ready
@@ -28,7 +24,7 @@ services:
       - db:db
     depends_on:
       - db
-
+      
   adminer:
     container_name: adminerMysql
     image: adminer
