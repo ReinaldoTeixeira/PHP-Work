@@ -21,3 +21,15 @@ services:
       - "8082:80"
     stdin_open: true
     tty: true
+
+  adminer:
+    container_name: adminerMysql
+    image: adminer
+    restart: always
+    ports:
+      - 8083:8080
+    links:
+      - db:db
+    depends_on:
+      - db
+    
