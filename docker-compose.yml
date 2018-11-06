@@ -9,20 +9,21 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     ports:
-      - "8889:3306"
+      - "3306:3306"
+
   web:
-    image: virgilioneto/laravel-ready
+    build: .
+    # image: virgilioneto/laravel-ready
     container_name: php_web
     restart: unless-stopped
-    depends_on:
-      - db
     volumes:
       - ./:/var/www/html/
     ports:
       - "8082:80"
-    stdin_open: true
-    tty: true
-<<<<<<< HEAD
+    links:
+      - db:db
+    depends_on:
+      - db
 
   adminer:
     container_name: adminerMysql
@@ -35,5 +36,3 @@ services:
     depends_on:
       - db
     
-=======
->>>>>>> a8bd7175c63328213f87c022a6678eecd108881a
