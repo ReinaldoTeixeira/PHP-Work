@@ -9,10 +9,11 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     ports:
-      - "3306:3306"
+      - "8889:3306"
   web:
-    image: php:7.2.2-apache
+    image: virgilioneto/laravel-ready
     container_name: php_web
+    restart: unless-stopped
     depends_on:
       - db
     volumes:
