@@ -11,7 +11,10 @@
 		<body>
 			<form class="form-horizontal" action="" method=""> 
 				<?php
-				include("viewer/menu_index.php");
+					include("viewer/menu_index.php");
+					require("./model/conexao.php");
+			
+					$query = $con->query("SELECT * FROM evento");
 				?>
 			</form>
 		</body>
